@@ -92,6 +92,7 @@ The overview summarizes the relationship between the governed data estate, Micro
 - Automated file-level lineage from source to governed target
 - Schema-aware lineage visualization
 - Re-scan validation proving curated governance metadata persists
+- audited project-scoped ADF ARM snapshot
 
 ## Architecture
 
@@ -266,7 +267,11 @@ See [docs/evidence/README.md](docs/evidence/README.md).
 .
 ├── README.md
 ├── adf/
-│   └── README.md
+│   ├── README.md
+│   └── arm/
+│       ├── ARMTemplateForFactory.project.json
+│       ├── ARMTemplateParametersForFactory.project.json
+│       └── EXPORT_AUDIT.md
 ├── diagrams/
 │   ├── banner.jpg
 │   ├── 00_governance_overview.jpg
@@ -338,4 +343,4 @@ That is the role of governance.
 
 ## Status
 
-**Functional MVP validated — public packaging and final QA in progress.**
+**Functional MVP validated — public packaging complete / final closeout QA in progress.**
