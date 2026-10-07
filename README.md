@@ -343,4 +343,4 @@ That is the role of governance.
 
 ## Status
 
-**Functional MVP validated — public packaging complete / final closeout QA in progress.**
+**Status: Completed / portfolio-ready MVP closed.**
