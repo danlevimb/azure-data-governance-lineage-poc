@@ -76,3 +76,26 @@ customer_master.csv
 ```
 
 The repository documents the implementation rather than publishing fabricated ADF export JSON. Native ADF artifacts can be added later if the project is connected to Git source control or explicitly exported.
+
+
+## Versioned ARM snapshot
+
+A project-scoped ARM snapshot derived from the real Azure Data Factory export is versioned under:
+
+```text
+adf/arm/
+├── ARMTemplateForFactory.project.json
+├── ARMTemplateParametersForFactory.project.json
+└── EXPORT_AUDIT.md
+```
+
+The published snapshot contains only the resources used by this POC:
+
+- `ls_adls_governance_dan_dev`
+- `ds_customer_master_source_csv`
+- `ds_customer_master_governed_csv`
+- `pl_customer_master_lineage`
+- `Copy_CustomerMaster_To_Governed`
+- explicit 20-column 1:1 mapping
+
+The raw ADF export also contained an unrelated Self-Hosted Integration Runtime and factory-level identity identifiers. Those were intentionally excluded from the public snapshot. See [arm/EXPORT_AUDIT.md](arm/EXPORT_AUDIT.md).
