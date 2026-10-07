@@ -6,7 +6,7 @@ Planned assets:
 
 ```text
 diagrams/
-├── banner.png
+├── banner.jpg
 ├── 01_governance_architecture.png
 ├── 02_discovery_stewardship_lineage.png
 └── 03_persistence_validation.png
@@ -20,4 +20,4 @@ Visual goals:
 - consistent typography and spacing with the Real-Time and Databricks repositories;
 - each diagram must explain a specific engineering claim.
 
-The banner will be inserted above the centered README title after final visual QA.
+The banner is now the README hero image. The remaining technical diagrams are being finalized and will be added below the architecture and validation sections.
