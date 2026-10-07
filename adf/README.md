@@ -75,8 +75,7 @@ Copy_CustomerMaster_To_Governed
 customer_master.csv
 ```
 
-The repository documents the implementation rather than publishing fabricated ADF export JSON. Native ADF artifacts can be added later if the project is connected to Git source control or explicitly exported.
-
+The repository documents the implementation and includes an audited, project-scoped ARM snapshot derived from the real Azure Data Factory export.
 
 ## Versioned ARM snapshot
 
