@@ -2,29 +2,22 @@
 
 This directory contains a deliberately small, curated set of screenshots that support the main engineering claims in the project.
 
-The evidence pack is being published in stages during final packaging. Portal screenshots are stored as PNG to preserve small UI text and avoid lossy compression artifacts.
+Portal screenshots are stored as **PNG** to preserve small UI text and avoid lossy compression artifacts.
 
 ## Published
 
 | ID | Screenshot | What it proves |
 |---|---|---|
-| GVL-03 | [GVL-03_scan_scope_governed_only.png](screenshots/GVL-03_scan_scope_governed_only.webp) | Purview discovery was intentionally scoped to the governed data area |
-| GVL-05 | [GVL-05_asset_glossary_and_classifications.png](screenshots/GVL-05_asset_glossary_and_classifications.webp) | Business glossary association and eight schema classifications |
-
-## Curated next
-
-The following screenshots have already been reviewed as valid project evidence and are queued for public-safe packaging:
-
-| ID | Evidence | Claim |
-|---|---|---|
-| GVL-06 | ADF ↔ Purview connection | Pipeline lineage integration enabled |
-| GVL-08 | ADF Monitor lineage status | ADF successfully reported lineage |
-| GVL-09 | Purview file-level lineage | Source → process → governed target |
-| GVL-10 | Schema-aware lineage | Source and target schemas visible in lineage |
-| GVL-12 | Metadata persistence after re-scan | Description, glossary, and classifications persisted |
-| GVL-13 | Contact persistence after re-scan | Owner / Expert persisted |
-| GVL-14 | Lineage persistence after re-scan | ADF lineage persisted |
-| GVL-15 | Final data estate | landing/source + governed/target final estate |
+| GVL-03 | [GVL-03_scan_scope_governed_only.png](screenshots/GVL-03_scan_scope_governed_only.png) | Purview discovery was intentionally scoped to the governed data area |
+| GVL-05 | [GVL-05_asset_glossary_and_classifications.png](screenshots/GVL-05_asset_glossary_and_classifications.png) | Business glossary association and eight schema classifications |
+| GVL-06 | [GVL-06_adf_purview_lineage_connected.png](screenshots/GVL-06_adf_purview_lineage_connected.png) | ADF ↔ Purview lineage integration was enabled |
+| GVL-08 | [GVL-08_adf_lineage_reporting_success.png](screenshots/GVL-08_adf_lineage_reporting_success.png) | ADF Monitor reported lineage successfully |
+| GVL-09 | [GVL-09_purview_file_level_lineage.png](screenshots/GVL-09_purview_file_level_lineage.png) | Purview captured source → ADF process → governed target lineage |
+| GVL-10 | [GVL-10_purview_schema_aware_lineage.png](screenshots/GVL-10_purview_schema_aware_lineage.png) | Source and target schemas are visible in the lineage experience |
+| GVL-12 | [GVL-12_metadata_persistence_after_rescan.png](screenshots/GVL-12_metadata_persistence_after_rescan.png) | Description, glossary, and classifications persisted after re-scan |
+| GVL-13 | [GVL-13_contacts_persistence_after_rescan.png](screenshots/GVL-13_contacts_persistence_after_rescan.png) | Owner and Expert stewardship contacts persisted after re-scan |
+| GVL-14 | [GVL-14_lineage_persistence_after_rescan.png](screenshots/GVL-14_lineage_persistence_after_rescan.png) | ADF lineage persisted after the subsequent Purview scan |
+| GVL-15 | [GVL-15_final_data_estate.png](screenshots/GVL-15_final_data_estate.png) | Final landing/source and governed/target data estate |
 
 ## Evidence discipline
 
