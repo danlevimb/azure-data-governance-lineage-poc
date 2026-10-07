@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="diagrams/banner.jpg" width="1000"/>
+</p>
+
 <h1 align="center">Azure Data Governance & Lineage POC</h1>
 
 <p align="center">
