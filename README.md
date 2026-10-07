@@ -62,6 +62,23 @@ The overview summarizes the relationship between the governed data estate, Micro
 
 ---
 
+## At a glance
+
+| Area | Implementation |
+|---|---|
+| Cloud platform | Microsoft Azure |
+| Governance / catalog | Microsoft Purview |
+| Storage | Azure Data Lake Storage Gen2 |
+| Orchestration | Azure Data Factory |
+| Identity | System-assigned Managed Identity |
+| Authorization | Azure RBAC |
+| Discovery | Scoped Purview scan |
+| Classification | Built-in automatic + steward-reviewed manual classification |
+| Business context | Description, Owner, Expert, business glossary |
+| Lineage | Automated ADF file-level lineage into Purview |
+| Validation | Re-scan persistence of curated governance metadata |
+| Data | Fully synthetic 20-column customer master CSV |
+
 ## What this project demonstrates
 
 - Microsoft Purview registration and scoped ADLS Gen2 scanning
