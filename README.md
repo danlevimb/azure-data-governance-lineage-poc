@@ -52,6 +52,14 @@ This project uses a deliberately small Azure data estate to demonstrate practica
 
 The scope is intentionally compact. The goal is not to simulate an enterprise-wide governance program; it is to prove the reasoning and implementation patterns behind a defensible governance MVP.
 
+### Project overview
+
+<p align="center">
+  <img src="diagrams/00_governance_overview.jpg" width="1000" alt="Azure Data Governance and Lineage POC overview"/>
+</p>
+
+The overview summarizes the relationship between the governed data estate, Microsoft Purview, Azure Data Factory, stewardship, classification, and lineage. The sections below break those capabilities down into their engineering details.
+
 ---
 
 ## What this project demonstrates
@@ -70,26 +78,17 @@ The scope is intentionally compact. The goal is not to simulate an enterprise-wi
 
 ## Architecture
 
-> Visual diagrams are being finalized to match the portfolio's established Azure project style.
+<p align="center">
+  <img src="diagrams/01_governance_architecture.png" width="1000" alt="End-to-end Azure governance architecture"/>
+</p>
 
-### Visual technical guides
+The architecture separates the **data plane** from the **governance plane**:
 
-- End-to-end governance architecture — planned
-- Discovery → stewardship → lineage flow — planned
-- Governance controls & persistence validation — planned
-
-```mermaid
-flowchart LR
-    S["ADLS Gen2<br/>landing/customer_master_source.csv"]
-    A["Azure Data Factory<br/>pl_customer_master_lineage<br/>Copy_CustomerMaster_To_Governed"]
-    T["ADLS Gen2<br/>governed/customer_master.csv"]
-    P["Microsoft Purview<br/>Data Map / Catalog"]
-
-    S --> A --> T
-    S -. metadata / lineage .-> P
-    A -. lineage .-> P
-    T -. scan / metadata .-> P
-```
+- ADLS Gen2 hosts the landing and governed assets.
+- Azure Data Factory moves the source asset into the governed area.
+- Microsoft Purview scans and catalogs the governed asset.
+- Managed identities and Azure RBAC provide non-secret authentication and authorization.
+- ADF reports lineage into Purview so the movement from source to governed target is traceable.
 
 ### Data estate
 
@@ -105,19 +104,19 @@ The sample data is fully synthetic.
 
 ## Governance flow
 
-```mermaid
-flowchart TD
-    R["Register ADLS Gen2 source"]
-    S["Scoped Purview scan"]
-    D["Discover asset + schema"]
-    C["Automatic classification"]
-    H["Human review / manual classification"]
-    B["Description + Owner + Expert + Glossary"]
-    L["ADF automated lineage"]
-    V["Re-scan persistence validation"]
+<p align="center">
+  <img src="diagrams/02_discovery_stewardship_lineage.png" width="1000" alt="Discovery, stewardship, and lineage governance flow"/>
+</p>
 
-    R --> S --> D --> C --> H --> B --> L --> V
-```
+The governance lifecycle intentionally combines **automated discovery** with **human stewardship**:
+
+1. register and scope the source;
+2. discover the asset and schema;
+3. classify automatically where possible;
+4. review and correct business context manually;
+5. enrich the asset with description, ownership, and glossary terms;
+6. capture ADF lineage;
+7. re-scan and verify that curated metadata persists.
 
 ## Key implementation decisions
 
@@ -210,6 +209,10 @@ It does **not** claim explicit column-to-column lineage edges because those were
 
 After lineage was established, the Purview scan was executed again.
 
+<p align="center">
+  <img src="diagrams/03_persistence_validation.png" width="1000" alt="Governance metadata persistence validation"/>
+</p>
+
 The re-scan successfully refreshed technical metadata while preserving:
 
 - asset description
@@ -247,6 +250,12 @@ See [docs/evidence/README.md](docs/evidence/README.md).
 ├── README.md
 ├── adf/
 │   └── README.md
+├── diagrams/
+│   ├── banner.jpg
+│   ├── 00_governance_overview.jpg
+│   ├── 01_governance_architecture.png
+│   ├── 02_discovery_stewardship_lineage.png
+│   └── 03_persistence_validation.png
 ├── docs/
 │   ├── architecture.md
 │   ├── governance-model.md
