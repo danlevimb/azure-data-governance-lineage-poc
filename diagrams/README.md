@@ -1,23 +1,36 @@
 # Visual Package
 
-The visual package for this repository will follow the same look & feel as the other Azure portfolio projects.
+This directory contains the visual layer for the Azure Data Governance & Lineage POC.
 
-Planned assets:
+The package follows the same look & feel used across the Azure portfolio: a strong first-sight banner, clean technical diagrams, Azure-oriented visual language, and one engineering idea per image.
+
+## Assets
 
 ```text
 diagrams/
 ├── banner.jpg
+├── 00_governance_overview.jpg
 ├── 01_governance_architecture.png
 ├── 02_discovery_stewardship_lineage.png
 └── 03_persistence_validation.png
 ```
 
-Visual goals:
+## Purpose
 
-- wide Azure-style banner suitable for the top of the README;
-- clean dark-blue / Azure visual language;
-- simple architecture shapes rather than decorative diagrams;
-- consistent typography and spacing with the Real-Time and Databricks repositories;
-- each diagram must explain a specific engineering claim.
+| Asset | Role |
+|---|---|
+| `banner.jpg` | README hero / first visual impression |
+| `00_governance_overview.jpg` | High-level project overview |
+| `01_governance_architecture.png` | End-to-end Azure architecture |
+| `02_discovery_stewardship_lineage.png` | Governance lifecycle from discovery to lineage |
+| `03_persistence_validation.png` | Re-scan and curated-metadata persistence validation |
 
-The banner is now the README hero image. The remaining technical diagrams are being finalized and will be added below the architecture and validation sections.
+## Visual discipline
+
+- Banner = identity and first impression.
+- Overview = broad conceptual map.
+- Architecture = systems and responsibilities.
+- Governance flow = process and stewardship.
+- Persistence validation = final technical proof.
+
+The diagrams are embedded directly in the main README where each one supports the surrounding explanation.
