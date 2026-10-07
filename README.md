@@ -1,8 +1,54 @@
-# Azure Data Governance & Lineage POC
+<h1 align="center">Azure Data Governance & Lineage POC</h1>
 
-A focused Azure Data Engineering portfolio project demonstrating how a small data estate can be **discovered, classified, described, owned, traced, and governed** using Microsoft Purview, Azure Data Lake Storage Gen2, and Azure Data Factory.
+<p align="center">
+  Making data discoverable, understandable, owned, classified, and traceable.
+</p>
 
-The project intentionally stays small. The goal is not to simulate an enterprise-wide governance program, but to prove the core mechanics and reasoning behind metadata management, stewardship, classification, glossary mapping, and automated lineage.
+<p align="center">
+  <a href="docs/architecture.md">Architecture</a> |
+  <a href="docs/README.md">Documentation</a> |
+  <a href="docs/evidence/README.md">Evidence</a> |
+  <a href="docs/governance-model.md">Governance Model</a> |
+  <a href="docs/validation-summary.md">Validation</a>
+</p>
+
+---
+
+## The problem
+
+A technically valid dataset is not fully trustworthy if consumers cannot answer:
+
+- What is this asset?
+- Where did it come from?
+- Who owns it?
+- Which fields may contain sensitive information?
+- Which business concept does it represent?
+- What process produced it?
+
+The challenge is not simply to store or move data.
+
+The challenge is to make **data discoverable, understandable, owned, classified, and traceable**.
+
+---
+
+## The idea
+
+This project uses a deliberately small Azure data estate to demonstrate practical governance mechanics with:
+
+- Microsoft Purview
+- Azure Data Lake Storage Gen2
+- Azure Data Factory
+- Managed Identity
+- Azure RBAC
+- metadata discovery
+- classification
+- stewardship
+- business glossary
+- automated lineage
+
+The scope is intentionally compact. The goal is not to simulate an enterprise-wide governance program; it is to prove the reasoning and implementation patterns behind a defensible governance MVP.
+
+---
 
 ## What this project demonstrates
 
@@ -19,6 +65,14 @@ The project intentionally stays small. The goal is not to simulate an enterprise
 - Re-scan validation proving curated governance metadata persists
 
 ## Architecture
+
+> Visual diagrams are being finalized to match the portfolio's established Azure project style.
+
+### Visual technical guides
+
+- End-to-end governance architecture — planned
+- Discovery → stewardship → lineage flow — planned
+- Governance controls & persistence validation — planned
 
 ```mermaid
 flowchart LR
