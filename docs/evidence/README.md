@@ -2,14 +2,14 @@
 
 This directory contains a deliberately small, curated set of screenshots that support the main engineering claims in the project.
 
-The evidence pack is being published in stages during final packaging. Only screenshots that are cropped, public-safe, and directly tied to a technical claim are committed.
+The evidence pack is being published in stages during final packaging. Portal screenshots are stored as PNG to preserve small UI text and avoid lossy compression artifacts.
 
 ## Published
 
 | ID | Screenshot | What it proves |
 |---|---|---|
-| GVL-03 | [GVL-03_scan_scope_governed_only.webp](screenshots/GVL-03_scan_scope_governed_only.webp) | Purview discovery was intentionally scoped to the governed data area |
-| GVL-05 | [GVL-05_asset_glossary_and_classifications.webp](screenshots/GVL-05_asset_glossary_and_classifications.webp) | Business glossary association and eight schema classifications |
+| GVL-03 | [GVL-03_scan_scope_governed_only.png](screenshots/GVL-03_scan_scope_governed_only.webp) | Purview discovery was intentionally scoped to the governed data area |
+| GVL-05 | [GVL-05_asset_glossary_and_classifications.png](screenshots/GVL-05_asset_glossary_and_classifications.webp) | Business glossary association and eight schema classifications |
 
 ## Curated next
 
