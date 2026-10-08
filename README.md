@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="diagrams/banner.jpg" width="1000"/>
+  <img src="diagrams/banner.jpg" width="1000" alt="Azure Data Governance and Lineage POC banner"/>
 </p>
 
 <h1 align="center">Azure Data Governance & Lineage POC</h1>
@@ -316,6 +316,16 @@ Validated areas:
 - contact persistence
 - lineage persistence
 
+## Cost & cleanup
+
+The technical MVP and public evidence package are complete.
+
+Azure resource retention / deletion is treated as a separate operational closeout decision after evidence capture. This repository therefore does **not** claim that all project resources have already been deleted or that ongoing Azure cost is necessarily zero.
+
+Any final retain/delete decision should preserve the evidence and documentation required for the portfolio while avoiding unnecessary long-running resources.
+
+---
+
 ## Known MVP exclusions
 
 This project intentionally does not implement:
@@ -343,4 +353,4 @@ That is the role of governance.
 
 ## Status
 
-**Status: Completed / portfolio-ready MVP closed.**
+**Completed / portfolio-ready MVP closed.**
